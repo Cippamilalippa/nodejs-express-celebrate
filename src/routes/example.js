@@ -1,17 +1,29 @@
 const { celebrate, Joi } = require('celebrate')
 
 module.exports = (app) => {
-  /*
-  Method: GET
-  Description: simple get call without validation
-   */
+
   app.get('/getExample', async (req, res) => {
     return res.send('This is a simple GET request without parameters')
   })
 
-  /*
-  Method: GET
-  Description: params validation
+  /**
+   * @swagger
+   *
+   * /getExample/{idUtente}:
+   *  get:
+   *    tags:
+   *    - examples
+   *    summary: Get example
+   *    description: Description of get example
+   *    parameters:
+   *    - in: path
+   *      name: idExample
+   *      type: integer
+   *      required: true
+   *      description: description param
+   *    responses:
+   *      200:
+   *        description: Successful operation
    */
   app.get('/getExample/:idExample', celebrate({
     params: Joi.object().keys({
@@ -23,10 +35,7 @@ module.exports = (app) => {
     return res.send(`You required /getExample/${idExample}`)
   })
 
-  /*
-  Method: POST
-  Description: multiple path pointing at the same function, with the same validation.
-   */
+
   app.post([
     '/postExample',
     '/postExample/:idExample'
