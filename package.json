@@ -1,0 +1,44 @@
+{
+  "name": "nodejs-express-celebrate",
+  "description": "A successful Node.js structure for building Rest-API",
+  "version": "1.0.0",
+  "main": "index.js",
+  "port": "8001",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:dev": "NODE_ENV=development nodemon --ignore './src/docs' src/index.js",
+    "start:prod": "NODE_ENV=production node src/index.js",
+    "deploy": "git checkout develop && git push origin develop",
+    "deploy:prod": "git checkout master && git push origin master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Cippamilalippa/nodejs-express-celebrate.git"
+  },
+  "author": "Cippamilalippa",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "celebrate": "^12.1.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "custom-env": "^2.0.1",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "express-enqueue": "^1.0.0",
+    "knex": "^0.21.0",
+    "knex-on-duplicate-update": "^1.1.3",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "morgan-body": "^2.4.8",
+    "mysql": "^2.18.1",
+    "objection": "^2.1.3",
+    "require-dir": "^1.2.0",
+    "swagger-jsdoc": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10",
+    "standard": "^12.0.1"
+  }
+}
