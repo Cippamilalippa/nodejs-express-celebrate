@@ -56,5 +56,5 @@ app.use((e, req, res, next) => {
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server started on port: ${PORT}`)
-  console.log(`Environment: ${JSON.stringify(process.env, null, 2)}`)
+  // console.log(`Environment: ${JSON.stringify(process.env, null, 2)}`)
 })

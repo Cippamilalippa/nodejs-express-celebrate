@@ -10,26 +10,10 @@ const options = {
     info: {
       title: 'nodejs-express-celebrate',
       version: '1.0.0'
-    },
-    servers: [
-      {
-        url: ``
-      }
-    ],
-    components: {
-      securitySchemes: {
-        Bearer: {
-          type: 'http',
-          scheme: 'bearer'
-        }
-      }
-    },
-    security: [
-      { Bearer: [] }
-    ]
+    }
   },
   // Path to the API docs
-  apis: [path.join(__dirname, 'routes/*.js')]
+  apis: [path.join(__dirname, 'routes/*')]
 }
 
 const apiDocs = (app) => {

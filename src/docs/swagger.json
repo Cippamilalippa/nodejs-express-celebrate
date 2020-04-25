@@ -4,24 +4,31 @@
         "title": "nodejs-express-celebrate",
         "version": "1.0.0"
     },
-    "servers": [
-        {
-            "url": ""
-        }
-    ],
-    "components": {
-        "securitySchemes": {
-            "Bearer": {
-                "type": "http",
-                "scheme": "bearer"
+    "paths": {
+        "/getExample/{idUtente}": {
+            "get": {
+                "tags": [
+                    "examples"
+                ],
+                "summary": "Get example",
+                "description": "Description of get example",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "idExample",
+                        "type": "integer",
+                        "required": true,
+                        "description": "description param"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
             }
         }
     },
-    "security": [
-        {
-            "Bearer": []
-        }
-    ],
-    "paths": {},
+    "components": {},
     "tags": []
 }
