@@ -30,7 +30,7 @@
     "knex": "^0.21.0",
     "knex-on-duplicate-update": "^1.1.3",
     "lodash": "^4.17.15",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "morgan-body": "^2.4.8",
     "mysql": "^2.18.1",
     "objection": "^2.1.3",
